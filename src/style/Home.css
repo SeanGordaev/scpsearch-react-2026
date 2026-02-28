@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('./fonts/Rajdhani-Regular.ttf') format('truetype');
+}
+
+.ui-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+
+    background-color: #1a1c20;
+    border: 1px solid #2a2e35;
+    border-radius: 20px;
+
+    box-shadow: 
+        0 0 0 1px #0e1013,
+        0 20px 40px rgba(0,0,0,0.6);
+    transition: box-shadow 0.8s ease;
+
+    color: #e5e7eb;
+    
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.ui-display:hover {
+    box-shadow: 
+        0 0 0 1px #0e1013,
+        0 20px 60px rgba(0,0,0,0.6);
+}
+
+.ui-display span {
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.ui-choice {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.ui-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.ui-inputs > input {
+    padding: 13px 16px;
+    background-color: #15161a;
+    border: 1px solid #2a2e35;
+    border-radius: 8px;
+
+    color: #e5e7eb;
+    font-size: 14px;
+
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ui-inputs > input:focus {
+    outline: none;
+    border: 1px solid #3a3f46;
+    box-shadow: 0 0 8px rgba(53, 57, 68, 0.4);
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    background-color: #15161a;
+    border: 1px solid #2a2e35;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+button {
+    background-color: #3a3f46;
+    border: 1px solid #2a2e35;
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    color: #e5e7eb;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 
+        background-color 0.25s ease,
+        transform 0.08s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #444a52;
+    border-color: #555c66;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+button:active {
+    transform: scale(0.96);
+    background-color: #2f343b;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(90, 95, 105, 0.6);
+}
