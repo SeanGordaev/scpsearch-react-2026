@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('./fonts/Rajdhani-Regular.ttf') format('truetype');
+}
+
+.se-display {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1c20;
+
+    color: #e5e7eb;
+
+}
+
+.se-display .search-pleace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 15%;
+
+    font-size: 30px;
+    
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    background-color: rgb(66, 66, 66); 
+    
+    /* transform: scalex(0); */
+
+    animation: show 1.05s ease;
+    
+}
+
+@keyframes show {
+    0% {transform: scaleX(0);}
+    100% {transform: scaleX(1);}
+}
+
+.se-display .search-pleace input {
+    padding: 2px 8px;
+    width: 40%;
+
+    font-size: 20px;
+    text-align: center;
+}
