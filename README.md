@@ -43,7 +43,7 @@ The interface reproduces a restricted-access environment where personnel must au
 ### tools:
 - Visual Studio Code
 - React JS + CSS + HTML 
-- chat GPT (for design only)
+- chat GPT (for design (CSS or Idea) only)
 
 
 ---
