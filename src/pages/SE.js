@@ -39,7 +39,6 @@ export const SE = () => {
     }
 
     const Search = (num) => {
-        console.log(num.lenght)
         if (checkCorrect(num) && level !== "0") {
             setBlocks(false);
             if (num.length === 1) { window.open("https://scp-wiki.wikidot.com/scp-00"+num) }
