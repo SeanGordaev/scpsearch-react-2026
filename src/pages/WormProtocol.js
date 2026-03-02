@@ -155,6 +155,7 @@ export const WP = () => {
           </div>
         )}
 
+        {/* Button - Back To Home Page */}
         {phase === 3 && (
           <div className="return-panel">
             <span>From ██████:</span>
