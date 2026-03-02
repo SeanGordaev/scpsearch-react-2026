@@ -46,6 +46,8 @@ The interface reproduces a restricted-access environment where personnel must au
 - chat GPT (for design (CSS or Idea) only)
 
 
+To can open site with this link: https://scpsearch-react-2026.vercel.app/
+
 ---
 
 This project is based on the SCP Foundation universe.
