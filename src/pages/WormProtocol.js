@@ -3,60 +3,60 @@ import { ReactTyped as Typed } from "react-typed";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+const bootSequence = [
+  "> Establishing encrypted channel...",
+  "> Routing traffic through internal gateway...",
+  "> Cipher protocol: AES-256-O5-4",
+  "> Generating session entropy...",
+  "> Validating digital signature...",
+  "> Verifying quantum checksum...",
+  "> Checking clearance registry...",
+  "> Cross-matching identity shard...",
+  "> Synchronizing secure node cluster...",
+  "> Access vector anomaly detected...",
+  "> Re-validating credentials...",
+  "> Comparing access vector signature...",
+];
+
+const intrusionSequence = [
+  "> ALERT: UNAUTHORIZED ACCESS CONFIRMED",
+  "> ALERT: Unauthorized presence confirmed.",
+  "> CLEARANCE MISMATCH DETECTED",
+  "> USER NOT REGISTERED IN FOUNDATION INDEX",
+  "> ACCESS DENIED",
+  "> Logging intrusion attempt...",
+  "> Trace route initialized...",
+  "> Geo-location triangulation: ███████",
+  "> Threat level escalated to RED.",
+];
+
+const emergencySequence = [
+  "> INITIATING EMERGENCY PROTOCOL Ω-4",
+  "> Isolating affected network segment...",
+  "> Deploying counter-intrusion daemons...",
+  "> Locking classified archives...",
+  "> Encrypting operational directives...",
+  "> Purging volatile memory sectors...",
+  "> Scrambling authentication residue...",
+  "> Activating fail-secure lockdown...",
+];
+
+const finalSequence = [
+  "> MEMORY SECTOR WIPE COMPLETE",
+  "> SESSION SIGNATURE DESTROYED",
+  "> INCIDENT LOGGED IN CENTRAL ARCHIVE",
+  "> NODE LOCKED",
+  "[ ~~ THIS SYSTEM PROTECTS CRITICAL GLOBAL INFRASTRUCTURE ~~ ]",
+  "[ ~~ UNAUTHORIZED PRESENCE JEOPARDIZES WORLD SECURITY ~~ ]",
+  "[ !! FURTHER ACCESS REQUIRES LEVEL 4 OVERRIDE !! ]",
+];
+
 export const WP = () => {
   const [phase, setPhase] = useState(0);
   const [progress, setProgress] = useState(0);
   const [lines, setLines] = useState([]);
   const nav = useNavigate();
   const lineDelay = 250;
-
-  const bootSequence = [
-    "> Establishing encrypted channel...",
-    "> Routing traffic through internal gateway...",
-    "> Cipher protocol: AES-256-O5-4",
-    "> Generating session entropy...",
-    "> Validating digital signature...",
-    "> Verifying quantum checksum...",
-    "> Checking clearance registry...",
-    "> Cross-matching identity shard...",
-    "> Synchronizing secure node cluster...",
-    "> Access vector anomaly detected...",
-    "> Re-validating credentials...",
-    "> Comparing access vector signature...",
-  ];
-
-  const intrusionSequence = [
-    "> ALERT: UNAUTHORIZED ACCESS CONFIRMED",
-    "> ALERT: Unauthorized presence confirmed.",
-    "> CLEARANCE MISMATCH DETECTED",
-    "> USER NOT REGISTERED IN FOUNDATION INDEX",
-    "> ACCESS DENIED",
-    "> Logging intrusion attempt...",
-    "> Trace route initialized...",
-    "> Geo-location triangulation: ███████",
-    "> Threat level escalated to RED.",
-  ];
-
-  const emergencySequence = [
-    "> INITIATING EMERGENCY PROTOCOL Ω-4",
-    "> Isolating affected network segment...",
-    "> Deploying counter-intrusion daemons...",
-    "> Locking classified archives...",
-    "> Encrypting operational directives...",
-    "> Purging volatile memory sectors...",
-    "> Scrambling authentication residue...",
-    "> Activating fail-secure lockdown...",
-  ];
-
-  const finalSequence = [
-    "> MEMORY SECTOR WIPE COMPLETE",
-    "> SESSION SIGNATURE DESTROYED",
-    "> INCIDENT LOGGED IN CENTRAL ARCHIVE",
-    "> NODE LOCKED",
-    "[ ~~ THIS SYSTEM PROTECTS CRITICAL GLOBAL INFRASTRUCTURE ~~ ]",
-    "[ ~~ UNAUTHORIZED PRESENCE JEOPARDIZES WORLD SECURITY ~~ ]",
-    "[ !! FURTHER ACCESS REQUIRES LEVEL 4 OVERRIDE !! ]",
-  ];
 
   // function - typing effect for lines
   const pushLines = (arr, delay = lineDelay) => {
@@ -67,6 +67,7 @@ export const WP = () => {
     });
   };
 
+  // Phase 1
   useEffect(() => {
     if (phase === 1) {
       pushLines(bootSequence);
@@ -76,6 +77,12 @@ export const WP = () => {
       }, bootSequence.length * lineDelay + 900);
     }
 
+     // eslint-disable-next-line
+  }, [phase]);
+
+  
+  // Phase 2
+  useEffect(() => {
     if (phase === 2) {
       setTimeout(() => {
         pushLines(emergencySequence);
@@ -91,17 +98,20 @@ export const WP = () => {
           return prev + 3;
         });
       }, lineDelay / 2);
-
     }
+     // eslint-disable-next-line
+  }, [phase]);
 
+  // Phase 3
+  useEffect(() => {
     if (phase === 3) {
       setTimeout(() => {
         pushLines(finalSequence);
       }, 1000);
     }
-  
      // eslint-disable-next-line
   }, [phase]);
+  
 
   return (
     <div className={`unauth-display ${phase >= 2 ? "emergency-mode" : ""}`}>
