@@ -27,6 +27,7 @@ The interface reproduces a restricted-access environment where personnel must au
 * Search:
 <img src="./imgs/Search.png" alt="Home.png" width="600px">
 *FPA (Foundation Personnel Access) colour varies based on the security clearance level selected by the user (see `src/style/SE.css` for exact values).*
+
   - *Level 0: **grey‑beige** (`#a99e9bae`)*
   - *Level 1: **bright yellow** (`#f7df01ae`)*
   - *Level 2: **yellow‑orange** (`#f6c6086c`)*
