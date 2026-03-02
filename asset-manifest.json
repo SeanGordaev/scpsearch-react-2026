@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/scpsearch-react-2026/static/css/main.18d79a69.css",
+    "main.js": "/scpsearch-react-2026/static/js/main.eb51f47b.js",
+    "static/media/Rajdhani-Regular.ttf": "/scpsearch-react-2026/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
+    "static/media/scp-logo-se.png": "/scpsearch-react-2026/static/media/scp-logo-se.f2189332231d1d5b63b9.png",
+    "index.html": "/scpsearch-react-2026/index.html",
+    "main.18d79a69.css.map": "/scpsearch-react-2026/static/css/main.18d79a69.css.map",
+    "main.eb51f47b.js.map": "/scpsearch-react-2026/static/js/main.eb51f47b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18d79a69.css",
+    "static/js/main.eb51f47b.js"
+  ]
+}
