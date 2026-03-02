@@ -3,6 +3,7 @@ import logo from '../imgs/scp-logo-se.png'
 import { ReactTyped as Typed } from 'react-typed'
 import { useState, useEffect, useContext } from 'react'
 import { context } from '../components/data'
+import { useNavigate } from 'react-router-dom';
 
 export const SE = () => {
     const [showTerminal, setShowTerminal] = useState(false)
@@ -11,11 +12,8 @@ export const SE = () => {
     const [userInput, setUserInput] = useState('');
     const [blocks, setBlocks] = useState(false);
     const cont = useContext(context);
-    try {
-        const [level] = cont[0] !== undefined ? cont : JSON.parse(window.localStorage.getItem("agents-level"));
-    } catch (TypeError) {
-        
-    }
+    const nav = useNavigate();
+    const [level, setLevel] = cont[0] !== undefined ? cont : [window.localStorage.getItem("agents-level"), null];
 
     useEffect(() => {
         if (showTerminal) {
@@ -29,9 +27,11 @@ export const SE = () => {
     }, [showTerminal])
 
     useEffect(() => {
-        if (level !== undefined)
-            window.localStorage.setItem("agents-level", JSON.stringify(level));
-        //todo - who are you?
+        if (level !== undefined && level !== null) {
+            window.localStorage.setItem("agents-level", level);
+        } else {
+            nav("/WP");
+        }
     }, [])
 
     const checkCorrect = (text) => {
