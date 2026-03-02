@@ -37,3 +37,17 @@ The interface reproduces a restricted-access environment where personnel must au
 
 * Worm:
 <img src="./imgs/Worm.png" alt="Home.png" width="600px">
+
+
+
+### tools:
+- Visual Studio Code
+- React JS + CSS + HTML 
+- chat GPT (for design only)
+
+
+---
+
+This project is based on the SCP Foundation universe.
+SCP content is licensed under Creative Commons Attribution-ShareAlike 3.0.
+Original source: https://scpwiki.com
