@@ -67,7 +67,6 @@ export const WP = () => {
     });
   };
 
-
   useEffect(() => {
     if (phase === 1) {
       pushLines(bootSequence);
@@ -100,7 +99,8 @@ export const WP = () => {
         pushLines(finalSequence);
       }, 1000);
     }
-
+  
+     // eslint-disable-next-line
   }, [phase]);
 
   return (

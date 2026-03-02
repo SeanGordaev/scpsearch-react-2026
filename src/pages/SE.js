@@ -13,7 +13,7 @@ export const SE = () => {
     const [blocks, setBlocks] = useState(false);
     const cont = useContext(context);
     const nav = useNavigate();
-    const [level, setLevel] = cont[0] !== undefined ? cont : [window.localStorage.getItem("agents-level"), null];
+    const [level] = cont[0] !== undefined ? cont : [window.localStorage.getItem("agents-level"), null];
 
     useEffect(() => {
         if (showTerminal) {
@@ -32,7 +32,7 @@ export const SE = () => {
         } else {
             nav("/WP");
         }
-    }, [])
+    }, [level, nav])
 
     const checkCorrect = (text) => {
         return /^\d+$/.test(text);;
